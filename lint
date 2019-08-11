@@ -13,7 +13,7 @@ echo "Checking for sensitive values..."
 
 curl -s $URL_PREFIX/data/keywords.txt | \
   grep "^[a-z]" | \
-  xargs -I {} grep -irn {} . --color=auto
+  xargs -I {} git grep -in --color=auto {} .
 echo
 
 echo "Complete."
