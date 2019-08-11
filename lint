@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 
+URL_PREFIX="https://raw.githubusercontent.com/isaacanthony/infosec-linter/master"
+
 echo "Checking for sensitive files..."
 
-cat data/suffixes.txt | \
+curl -s $URL_PREFIX/data/suffixes.txt | \
   grep "^[a-z]" | \
   xargs -I {} find . -name "*.{}"
 echo
 
 echo "Checking for sensitive values..."
 
-cat data/keywords.txt | \
+curl -s $URL_PREFIX/data/keywords.txt | \
   grep "^[a-z]" | \
   xargs -I {} grep -irn {} . --color=auto
 echo
