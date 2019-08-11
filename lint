@@ -5,7 +5,7 @@ URL_PREFIX="https://raw.githubusercontent.com/isaacanthony/infosec-linter/master
 echo "Checking for sensitive files..."
 
 git ls-files > .git-files
-git ls-files --others >> .git-files
+git ls-files --exclude-standard --others >> .git-files
 curl -s $URL_PREFIX/data/suffixes.txt | \
   grep "^[a-z]" | \
   xargs -I {} grep -i --color=auto ".{}$" .git-files
