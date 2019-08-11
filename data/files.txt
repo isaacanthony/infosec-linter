@@ -1,0 +1,22 @@
+# GENERAL
+.DS_Store
+.env
+.log
+
+# SQL SERVER
+tnsnames.ora
+
+# SQLITE
+.db
+.sqlite3
+.slite3-journal
+
+# POSTGRES
+.pgpass
+
+# PYTHON
+.ipynb_checkpoints
+.pytest_cache
+
+# TERRAFORM
+.tfstate

@@ -6,9 +6,9 @@ echo "Checking for sensitive files..."
 
 git ls-files > .git-files
 git ls-files --exclude-standard --others >> .git-files
-curl -s $URL_PREFIX/data/suffixes.txt | \
+curl -s $URL_PREFIX/data/files.txt | \
   grep "^[a-z]" | \
-  xargs -I {} grep -i --color=auto ".{}$" .git-files
+  xargs -I {} grep -i --color=auto {} .git-files
 rm .git-files
 echo
 

@@ -1,12 +1,17 @@
 # AWS
 aws_access_key_id
 aws_secret_access_key
+public-read
 
-# GENERAL
-http:
-ftp:
+# CREDENTIALS
 password
+username
 
-# SQL
+# RCE
+eval(
 exec(
 sp_executesql(
+
+# SSL
+http:
+ftp:
