@@ -4,9 +4,11 @@ URL_PREFIX="https://raw.githubusercontent.com/isaacanthony/infosec-linter/master
 
 echo "Checking for sensitive files..."
 
+git ls-files > .git-files
 curl -s $URL_PREFIX/data/suffixes.txt | \
   grep "^[a-z]" | \
-  xargs -I {} find . -name "*.{}"
+  xargs -I {} grep "*.{}" .git-files
+rm .git-files
 echo
 
 echo "Checking for sensitive values..."
