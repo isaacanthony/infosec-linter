@@ -1,0 +1,12 @@
+# AWS
+aws_access_key_id
+aws_secret_access_key
+
+# GENERAL
+http:
+ftp:
+password
+
+# SQL
+exec(
+sp_executesql(
