@@ -3,6 +3,10 @@
 .env
 .log
 
+# MYSQL
+.mylogin.cnf
+.mysql_history
+
 # SQL SERVER
 tnsnames.ora
 
