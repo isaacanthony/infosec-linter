@@ -7,6 +7,10 @@ public-read
 password
 username
 
+# DEVELOPER ERROR
+do not commit
+secret
+
 # MYSQL
 mysql_pwd
 
