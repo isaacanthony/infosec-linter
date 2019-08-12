@@ -8,7 +8,7 @@ git ls-files > .git-files
 git ls-files --exclude-standard --others >> .git-files
 curl -s $URL_PREFIX/data/files.txt | \
   grep "^[a-z]" | \
-  xargs -I {} grep -i -I --color=auto {} .git-files
+  xargs -I {} grep -i --color=auto {} .git-files
 rm .git-files
 echo
 
@@ -16,7 +16,7 @@ echo "Checking for sensitive values..."
 
 curl -s $URL_PREFIX/data/keywords.txt | \
   grep "^[a-z]" | \
-  xargs -I {} git grep -in --color=auto {} .
+  xargs -I {} git grep -iIn --color=auto {} .
 echo
 
 echo "Complete."
